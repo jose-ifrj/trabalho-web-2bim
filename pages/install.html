@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Trabalho de Web II</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery 3.5.1. -->
+    <script src="../bootstrap5/jquery-3.5.1.min.js" defer></script>
+    <!-- CSS Bootstrap 5 -->
+    <link rel="stylesheet" href="../bootstrap5/bootstrap.min.css">
+    <!-- Bootstrap javascript Bundle com Popper -->
+    <script src="../bootstrap5/bootstrap.bundle.min.js" defer></script>
+    <!-- Ícones do Bootstrap 5 -->
+    <link rel="stylesheet" href="../bootstrap5/bootstrap-icons.css">
+
+    <!-- Arquivo com classes CSS para mudar a cor da navbar -->
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <!-- Arquivo CDN com o carrossel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+
+    <!-- Arquivo com os estilos CSS do projeto -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Arquivo com os scripts do projeto -->
+    <script src="../js/main.js" defer></script>
+    
+</head>
+<body class="mb-5">
+
+<nav class="navbar navbar-expand-md navbar-dark sticky-top cor-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Início</a>
+        <button class="navbar-toggler deactivated" id="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#minhaNavbar">
+            <span class="navbar-toggler-icon deactivated" id="navTogIcon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="minhaNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Instalação</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Flutter</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Go</a></li>   
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-plus-fill"></i> Criar Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i> Entrar</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Área principal da página -->
+<main class="container mt-5">
+    <div class="row">
+        <!--Dart-->
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div style="width: 7rem;">
+                    <img class="icone-centro"
+                     src="../images/icon/dart_vertical.svg"
+                     style="width: 3.5rem;;"
+                     ></img>
+                </div>
+            </div>
+            <div class="col-md-9 mb-5">
+                <ul class="nav nav-tabs" 
+                 id="myTab"
+                 role="tablist">
+                
+                <!--BUTTONS-->
+                    <li class="nav-item" role="presentation">
+                        <button id="dart-win-tab" 
+                         class="nav-link active"
+                         data-bs-toggle="tab"
+                         data-bs-target="#dart-win"
+                         type="button"
+                         role="tab"
+                         aria-controls="dart-win"
+                         aria-selected="true">Windows</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="dart-lin-tab"
+                         class="nav-link" 
+                         data-bs-toggle="tab" 
+                         data-bs-target="#dart-lin" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="dart-lin" 
+                         aria-selected="false">Linux</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="dart-mac-tab"
+                         class="nav-link"
+                         data-bs-toggle="tab" 
+                         data-bs-target="#dart-mac" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="dart-mac" 
+                         aria-selected="false">MacOS</button>
+                    </li>
+                </ul>
+
+                <!--CONTENT-->
+                <div class="tab-content" id="myTabContent">
+                    <div id="dart-win"
+                     class="tab-pane fade show active"
+                     role="tabpanel" 
+                     aria-labelledby="dart-win-tab">
+                        <h5>1. Usando Chocolatey</h5>
+                    </div>
+
+                    <div id="dart-lin"
+                     class="tab-pane fade"  
+                     role="tabpanel" 
+                     aria-labelledby="dart-lin-tab">
+                        ...
+                    </div>
+
+                    <div id="dart-mac"
+                     class="tab-pane fade"
+                     role="tabpanel"
+                     aria-labelledby="dart-mac-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Flutter-->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="width: 7rem;">
+                    <img class="icone-centro" 
+                     src="../images/icon/flutter_vertical.svg" 
+                     style="width: 3.5rem;"
+                    ></img>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <ul class="nav nav-tabs" 
+                 id="myTab"
+                 role="tablist">
+                
+                <!--BUTTONS-->
+                    <li class="nav-item" role="presentation">
+                        <button id="flut-win-tab" 
+                         class="nav-link active"
+                         data-bs-toggle="tab"
+                         data-bs-target="#flut-win"
+                         type="button"
+                         role="tab"
+                         aria-controls="flut-win"
+                         aria-selected="true">Windows</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="flut-lin-tab"
+                         class="nav-link" 
+                         data-bs-toggle="tab" 
+                         data-bs-target="#flut-lin" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="flut-lin" 
+                         aria-selected="false">Linux</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="flut-mac-tab"
+                         class="nav-link"
+                         data-bs-toggle="tab" 
+                         data-bs-target="#flut-mac" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="flut-mac" 
+                         aria-selected="false">MacOS</button>
+                    </li>
+                </ul>
+
+                <!--CONTENT-->
+                <div class="tab-content" id="myTabContent">
+                    <div id="flut-win"
+                     class="tab-pane fade show active"
+                     role="tabpanel" 
+                     aria-labelledby="flut-win-tab">
+                        ...
+                    </div>
+
+                    <div id="flut-lin"
+                     class="tab-pane fade"  
+                     role="tabpanel" 
+                     aria-labelledby="flut-lin-tab">
+                        ...
+                    </div>
+
+                    <div id="flut-mac"
+                     class="tab-pane fade"
+                     role="tabpanel"
+                     aria-labelledby="flut-mac-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Go-->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <img src="../images/icon/go_blue.svg" style="width: 7rem;"></img>
+            </div>
+            <div class="col-md-6 mb-5">
+                <ul class="nav nav-tabs" 
+                 id="myTab"
+                 role="tablist">
+                
+                <!--BUTTONS-->
+                    <li class="nav-item" role="presentation">
+                        <button id="go-win-tab" 
+                         class="nav-link active"
+                         data-bs-toggle="tab"
+                         data-bs-target="#go-win"
+                         type="button"
+                         role="tab"
+                         aria-controls="go-win"
+                         aria-selected="true">Windows</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="go-lin-tab"
+                         class="nav-link" 
+                         data-bs-toggle="tab" 
+                         data-bs-target="#go-lin" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="go-lin" 
+                         aria-selected="false">Linux</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button id="go-mac-tab"
+                         class="nav-link"
+                         data-bs-toggle="tab" 
+                         data-bs-target="#go-mac" 
+                         type="button" 
+                         role="tab" 
+                         aria-controls="go-mac" 
+                         aria-selected="false">MacOS</button>
+                    </li>
+                </ul>
+
+                <!--CONTENT-->
+                <div class="tab-content" id="myTabContent">
+                    <div id="go-win"
+                     class="tab-pane fade show active"
+                     role="tabpanel" 
+                     aria-labelledby="go-win-tab">
+                        ...
+                    </div>
+
+                    <div id="go-lin"
+                     class="tab-pane fade"  
+                     role="tabpanel" 
+                     aria-labelledby="go-lin-tab">
+                        ...
+                    </div>
+
+                    <div id="go-mac"
+                     class="tab-pane fade"
+                     role="tabpanel"
+                     aria-labelledby="go-mac-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+</main>
+
+<!-- 
+    Rodapé (footer) da página. A classe fixed-bottom coloca o rodapé sempre na parte de baixo da janela, independente do tamanho da tela
+-->
+<footer class="container-fluid fixed-bottom">
+    <p class="text-center m-0 p-1">IFRJ - Campus Pinheiral, 2024</p>
+</footer>
+
+</body>
+</html>
