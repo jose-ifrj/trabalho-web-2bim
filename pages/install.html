@@ -26,6 +26,7 @@
     <!-- Arquivo com os scripts do projeto -->
     <script src="../js/main.js" defer></script>
     
+
 </head>
 <body class="mb-5">
 
@@ -37,9 +38,9 @@
         </button>
         <div class="collapse navbar-collapse" id="minhaNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Instalação</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Flutter</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Go</a></li>   
+                <li class="nav-item"><a class="nav-link" href="flutter.html">Flutter e Dart</a></li>
+                <li class="nav-item"><a class="nav-link" href="go.html">Go</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Instalação</a></li> 
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-plus-fill"></i> Criar Cadastro</a></li>
@@ -63,6 +64,7 @@
                 </div>
             </div>
             <div class="col-md-9 mb-5">
+                
                 <ul class="nav nav-tabs" 
                  id="myTab"
                  role="tablist">
@@ -102,36 +104,111 @@
                     </li>
                 </ul>
 
+                <div class="alert alert-success mt-5" role="alert">
+                    <h6>Aviso!</h6>
+                    <p>A instalação do Flutter inclui o Dart, então caso for usar os dois, pule esta etapa.</p>
+                </div>
+
                 <!--CONTENT-->
                 <div class="tab-content" id="myTabContent">
                     <div id="dart-win"
                      class="tab-pane fade show active"
                      role="tabpanel" 
                      aria-labelledby="dart-win-tab">
-                        <h5>1. Usando Chocolatey</h5>
-                        <p>a</p>
+                        <h5>Usando Chocolatey</h5>
+                        <p>
+                            1. Instale Chocolatey, um gerenciador de pacotes para Windows.
+                        </p>
+                        <p>
+                            2. Abra o Powershell com <strong>permissões de Administrador</strong>.
+                        </p>
+                        <p>
+                            3. Insira o comando para instalar: <br>
+                            <code>choco upgrade dart-sdk</code>
+                        </p>
+
+                        <p>
+                            Para atualizar, use: <br>
+                            <code>choco upgrade dart-sdk</code>
+                        </p>
+
+                        <p>
+                            Para desinstalar, use: <br>
+                            <code>choco uninstall dart-sdk</code>
+                        </p>
                     </div>
 
                     <div id="dart-lin"
                      class="tab-pane fade"  
                      role="tabpanel" 
                      aria-labelledby="dart-lin-tab">
-                        ...
+                        <h5>a. Ubuntu e derivados (apt-get)</h5>
+                        <p>Instalação através do Terminal.</p>
+                        <p>
+                            1. Faça uma atualização geral e instale o pacote de HTTP seguro. <br>
+                            <code>sudo apt-get update && sudo apt-get install apt-transport-https</code>
+                        </p>
+                        <p>
+                            2. Baixe e instale a chave pública GPG da Google. <br>
+                            <code>wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub \
+                                | sudo gpg  --dearmor -o /usr/share/keyrings/dart.gpg</code>
+                        </p>
+                        <p>
+                            3. Adicione o repositório de pacote de Dart no seu sistema Linux. <br>
+                            <code>echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' \
+                                | sudo tee /etc/apt/sources.list.d/dart_stable.list</code>
+                        </p>
+                        <p>
+                            4. Finalmente, instale Dart. <br>
+                            <code>sudo apt-get update && sudo apt-get install dart</code>
+                        </p>
+
+                        <h5>b. Debian e derivados (dpkg)</h5>
+                        <p>1. Baixe o <a href="https://storage.googleapis.com/dart-archive/channels/stable/release/latest/linux_packages/dart_3.5.3-1_amd64.deb">pacote Debian</a> do SDK de Dart</p>
+                        <p>
+                            2. Abra o terminal no diretório do arquivo baixado.
+                        </p>
+                        <p>
+                            3. Use o comando <code>sudo dpkg</code> para instalar o pacote <code>*.deb</code>. <br>
+                            <code>sudo dpkg -i dart_3.4.0-1_amd64.deb</code> <br>
+                            Se for necessário, substitue <code>dart_3.4.0-1_amd64</code> pelo atual nome do pacote.
+                        </p>
                     </div>
 
                     <div id="dart-mac"
                      class="tab-pane fade"
                      role="tabpanel"
                      aria-labelledby="dart-mac-tab">
-                        ...
+                        <h5>a. Usando Homebrew</h5>
+                        <p>
+                            1. Instale Homebrew, um gerenciador de pacotes para MacOS.
+                        </p>
+                        <p>
+                            2. Adicione o <a href="https://github.com/dart-lang/homebrew-dart">tap oficial</a>. <br>
+                            <code>brew tap dart-lang/dart</code>
+                        </p>
+                        <p>
+                            3. Instale o Dart SDK com este comando. <br>
+                            <code>brew install dart</code>
+                        </p>
+                        <p>
+                            Para atualizar, use: <br>
+                            <code>brew upgrade dart</code>
+                        </p>
+                        <p>
+                            Para desinstalar, use: <br>
+                            <code>brew uninstall dart</code>
+                        </p>
                     </div>
                 </div>
+
+                
             </div>
         </div>
 
         <!--Flutter-->
         <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
                 <div style="width: 7rem;">
                     <img class="icone-centro" 
                      src="../images/icon/flutter_vertical.svg" 
@@ -139,7 +216,7 @@
                     ></img>
                 </div>
             </div>
-            <div class="col-md-6 mb-5">
+            <div class="col-md-9 mb-5">
                 <ul class="nav nav-tabs" 
                  id="myTab"
                  role="tablist">
@@ -185,21 +262,105 @@
                      class="tab-pane fade show active"
                      role="tabpanel" 
                      aria-labelledby="flut-win-tab">
-                        ...
+                        <h5>Usando Visual Studio Code</h5>
+                        <p>
+                            1. Instale no VSCode a <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">extensão oficial de Flutter</a>.
+                        </p>
+                        <p>
+                            2. Pressione <code>Ctrl + Shift + P</code> para abrir a paleta de comandos. <br>
+                                <strong>a.</strong> Digite <code>flutter</code> na paleta de comandos. <br>
+                                <strong>b.</strong> Selecione <strong>Flutter: New Project</strong>.
+                        </p>
+                        <p>
+                            3. VSCode o pedirá para localizar Flutter SDK. <br>
+                                <strong>a.</strong> Caso tiver o Flutter instalado, escolha <strong>Locate SDK</strong> para selecionar a pasta onde está instalado. <br>
+                                <strong>b.</strong> Se não o tiver instalado, escolha <strong>Download SDK</strong>.
+                        </p>
+                        <p>
+                            4. Em <strong>"Which Flutter template?"</strong> ignore apertando <code>Esc</code>. Você poderá criar um projeto depois de instalado.
+                        </p>
+                        <h5>Baixando o Flutter</h5>
+                        <p>
+                            1. Em <strong>"Select Folder for Flutter SDK"</strong> está pedindo para especificar o local para armazenar o pacote. <br>
+                            O padrão é <code>%USERPROFILE%</code>. se quiser colocar em outro diretório, certifique-se de que o diretório não tenha espaço em seu nome, e não necessite de permissões de administrador.
+                        </p>
+                        <p>2. Clique em <strong>Clone Flutter</strong>.</p>
+                        <p>Espere o download.</p>
+                        <p>3. Ao Terminar, clique em <strong>Add SDK to PATH</strong>.</p>
+                        <p>
+                            4. Por ultimo, VSCode te informará da coleta de dados do Google. <br>
+                            Clique em <strong>Ok</strong> e reinicie o VSCode.
+                        </p>
                     </div>
 
                     <div id="flut-lin"
                      class="tab-pane fade"  
                      role="tabpanel" 
                      aria-labelledby="flut-lin-tab">
-                        ...
+                        <h5>Usando Visual Studio Code</h5>
+                        <p>
+                            1. Instale no VSCode a <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">extensão oficial de Flutter</a>.
+                        </p>
+                        <p>
+                            2. Pressione <code>Ctrl + Shift + P</code> para abrir a paleta de comandos. <br>
+                                <strong>a.</strong> Digite <code>flutter</code> na paleta de comandos. <br>
+                                <strong>b.</strong> Selecione <strong>Flutter: New Project</strong>.
+                        </p>
+                        <p>
+                            3. VSCode o pedirá para localizar Flutter SDK. <br>
+                                <strong>a.</strong> Caso tiver o Flutter instalado, escolha <strong>Locate SDK</strong> para selecionar a pasta onde está instalado. <br>
+                                <strong>b.</strong> Se não o tiver instalado, escolha <strong>Download SDK</strong>.
+                        </p>
+                        <p>
+                            4. Em <strong>"Which Flutter template?"</strong> ignore apertando <code>Esc</code>. Você poderá criar um projeto depois de instalado.
+                        </p>
+                        <h5>Baixando o Flutter</h5>
+                        <p>
+                            1. Em <strong>"Select Folder for Flutter SDK"</strong> está pedindo para especificar o local para armazenar o pacote. O padrão é na pasta de usuário, mas escolha outro diretório.<br>
+                            Considere <code>~/development/</code>.
+                        </p>
+                        <p>2. Clique em <strong>Clone Flutter</strong>.</p>
+                        <p>Espere o download.</p>
+                        <p>3. Ao Terminar, clique em <strong>Add SDK to PATH</strong>.</p>
+                        <p>
+                            4. Por ultimo, VSCode te informará da coleta de dados do Google. <br>
+                            Clique em <strong>Ok</strong> e reinicie o VSCode.
+                        </p>
                     </div>
 
                     <div id="flut-mac"
                      class="tab-pane fade"
                      role="tabpanel"
                      aria-labelledby="flut-mac-tab">
-                        ...
+                        <h5>Usando Visual Studio Code</h5>
+                        <p>
+                            1. Instale no VSCode a <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">extensão oficial de Flutter</a>.
+                        </p>
+                        <p>
+                            2. Pressione <code>Ctrl + Shift + P</code> para abrir a paleta de comandos. <br>
+                                <strong>a.</strong> Digite <code>flutter</code> na paleta de comandos. <br>
+                                <strong>b.</strong> Selecione <strong>Flutter: New Project</strong>.
+                        </p>
+                        <p>
+                            3. VSCode o pedirá para localizar Flutter SDK. <br>
+                                <strong>a.</strong> Caso tiver o Flutter instalado, escolha <strong>Locate SDK</strong> para selecionar a pasta onde está instalado. <br>
+                                <strong>b.</strong> Se não o tiver instalado, escolha <strong>Download SDK</strong>.
+                        </p>
+                        <p>
+                            4. Em <strong>"Which Flutter template?"</strong> ignore apertando <code>Esc</code>. Você poderá criar um projeto depois de instalado.
+                        </p>
+                        <h5>Baixando o Flutter</h5>
+                        <p>
+                            1. Em <strong>"Select Folder for Flutter SDK"</strong> está pedindo para especificar o local para armazenar o pacote. O padrão é na pasta de usuário, mas escolha outro diretório.<br>
+                            Considere <code>~/development/</code>.
+                        </p>
+                        <p>2. Clique em <strong>Clone Flutter</strong>.</p>
+                        <p>Espere o download.</p>
+                        <p>3. Ao Terminar, clique em <strong>Add SDK to PATH</strong>.</p>
+                        <p>
+                            4. Por ultimo, VSCode te informará da coleta de dados do Google. <br>
+                            Clique em <strong>Ok</strong> e reinicie o VSCode.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -207,10 +368,10 @@
 
         <!--Go-->
         <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3">
                 <img src="../images/icon/go_blue.svg" style="width: 7rem;"></img>
             </div>
-            <div class="col-md-6 mb-5">
+            <div class="col-md-9 mb-5">
                 <ul class="nav nav-tabs" 
                  id="myTab"
                  role="tablist">
@@ -256,27 +417,77 @@
                      class="tab-pane fade show active"
                      role="tabpanel" 
                      aria-labelledby="go-win-tab">
-                        ...
+                        <h5>Através do Instalador</h5>
+                        <p>
+                            1. Baixe o <a href="https://go.dev/dl/">instalador para Windows</a> no site.
+                        </p>
+                        <p>
+                            2. Abra o instalador e siga as instruções.
+                        </p>
+                        <p>
+                            3. Cheque a instalação através do terminal: <br>
+                            <strong>a.</strong> Abra algum terminal. <br>
+                            <strong>b.</strong> Insira o comando <code>go version</code>.
+                        </p>
+                        <p>
+                            Se o comando mostrar a versão de Go instalada, você está pronto para programar.
+                        </p>
                     </div>
 
                     <div id="go-lin"
                      class="tab-pane fade"  
                      role="tabpanel" 
                      aria-labelledby="go-lin-tab">
-                        ...
+                        <h5>Extraindo pacote comprimido (tar.gz)</h5>
+                        <p>
+                            1. Baixe o <a href="https://go.dev/dl/">pacote *.tar.gz</a> para Linux no site.
+                        </p>
+                        <p>
+                            2. Insira este comando no terminal: <br>
+                            <code>rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
+                            </code> <br>
+                            O comando remove alguma possível instalação anterior de Go e extrai na mesma pasta a versão baixada. <br>
+                            <i>Você talvez precise executar o comando como sudo ou trocar a versão especificada no comando.</i> 
+                        </p>
+                        <p>
+                            3. Adicione Go ao PATH. <br>
+                            <code>export PATH=$PATH:/usr/local/go/bin</code>
+                        </p>
+                        <p>
+                            3. Cheque a instalação através do terminal: <br>
+                            <strong>a.</strong> Abra algum terminal. <br>
+                            <strong>b.</strong> Insira o comando <code>go version</code>.
+                        </p>
+                        <p>
+                            Se o comando mostrar a versão de Go instalada, você está pronto para programar.
+                        </p>
                     </div>
 
                     <div id="go-mac"
                      class="tab-pane fade"
                      role="tabpanel"
                      aria-labelledby="go-mac-tab">
-                        ...
+                        <h5>Através do Instalador</h5>
+                        <p>
+                            1. Baixe o <a href="https://go.dev/dl/">instalador para MacOS</a> no site.
+                        </p>
+                        <p>
+                            2. Abra o instalador e siga as instruções.
+                        </p>
+                        <p>
+                            3. Cheque a instalação através do terminal: <br>
+                            <strong>a.</strong> Abra algum terminal. <br>
+                            <strong>b.</strong> Insira o comando <code>go version</code>.
+                        </p>
+                        <p>
+                            Se o comando mostrar a versão de Go instalada, você está pronto para programar.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
     
 
 </main>

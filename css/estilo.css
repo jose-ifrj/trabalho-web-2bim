@@ -2,6 +2,13 @@
     Arquivo que contém os estilos CSS do projeto
 */
 
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+
+html {
+    font-family: 'Mona Sans', JetbrainsMono;
+    font-feature-settings: "ss01" on, "ss03" on, "ss05" on, "ss07" on;
+}
+
 .icone-centro {
     display: block;
     margin: auto;
