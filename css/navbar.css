@@ -6,6 +6,7 @@
     --cor-fundo: rgb(235, 235, 235);
     --cor-texto: #000000;
     --cor-hover: rgb(90, 163, 147);
+    --cor-hover-lighter: rgb(115, 218, 195);
     --cor-fundo-dropdown : rgb(175, 175, 175); /* verde claro */
 }
 
